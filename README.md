@@ -1,9 +1,10 @@
+![Screenshots](https://github.com/krishnavpai/Fortitude/blob/main/assets/images/landing.png?raw=true)
 # Fortitude: Heal-thy Mind
 
 Welcome to Fortitude: Heal-thy Mind, a user-friendly mental health website designed to provide a private and supportive space for your well-being journey. Our platform offers a myriad of essential features, including a seamless dashboard, curated blogs and news, calming videos, convenient appointment scheduling, and a secure reflection area for journaling and mood tracking.  Embrace a healthier mind and a brighter tomorrow with Fortitude: your partner in healing and self-discovery.. 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-![Screenshots](https://github.com/krishnavpai/Fortitude/assets/images/Pages.jpg)
+![Screenshots](https://github.com/krishnavpai/Fortitude/blob/main/assets/images/Pages.jpg?raw=true)
 
 ## Table of Contents
 
