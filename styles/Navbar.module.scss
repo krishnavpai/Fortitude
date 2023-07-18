@@ -1,0 +1,110 @@
+@mixin smooth-hover {
+  a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+  }
+  a::after {
+    content: '';
+    bottom: -7px;
+    height: 2px;
+    width: 0;
+    transition: all 0.4s ease-out;
+    left: 0;
+    right: 0;
+    background: $fortitude-primary-color;
+    position: absolute;
+  }
+  a:hover::after {
+    width: 100%;
+  }
+}
+.navbar {
+  z-index: 100;
+  * {
+    background: #fff;
+  }
+  background: #fff;
+  font-family: $magra-font;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.7em 4em;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  box-shadow: $primary-box-shadow;
+  .brand {
+    color: $fortitude-primary-color;
+    align-self: center;
+    font-family: $lily-font;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  li {
+    list-style-type: none;
+    ul {
+      display: inline;
+      padding: 0 1.5em;
+      cursor: pointer;
+      margin: 0;
+      list-style-type: none;
+
+      @include smooth-hover;
+    }
+    ul:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+.hamburger {
+  font-size: 1.7em;
+  cursor: pointer;
+  display: none;
+}
+.smallnav {
+  display: flex;
+  margin: 1em auto;
+  margin-top: 1em;
+  align-items: center;
+  gap: 2em;
+  display: none;
+  transition: all 0.5s;
+  div {
+    margin-right: 2em;
+  }
+
+  @include smooth-hover;
+  flex-direction: column;
+}
+
+@media (max-width: 975px) {
+  .navbar {
+    li {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+}
+@media (min-width: 850px) {
+  .smallnav {
+    display: none;
+  }
+}
+
+.loadingScreen {
+  animation: fadeOut 1s 3s ease-out forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}

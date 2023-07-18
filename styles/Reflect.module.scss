@@ -1,0 +1,129 @@
+@mixin primary-h1 {
+  h1 {
+    font-size: 1.7em;
+    font-family: $magra-font;
+  }
+}
+// @mixin hr-animate($width) {
+//   hr {
+//     animation: 2s ease-in-out hehe forwards;
+//   }
+//   @keyframes hehe {
+//     from {
+//       width: 0;
+//     }
+//     to {
+//       width: 70%;
+//     }
+//   }
+// }
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+}
+.feeling {
+  font-family: $magra-font;
+  @include primary-h1();
+
+  hr {
+    height: 2px;
+    width: 75%;
+    border: none;
+    background-color: $fortitude-primary-color;
+  }
+}
+.journal {
+  @include primary-h1();
+  max-height: 75vh;
+  overflow: hidden;
+  hr {
+    height: 2px;
+    width: 60%;
+
+    border: none;
+    background-color: $fortitude-primary-color;
+  }
+}
+.innerjournal {
+  @include scrollbars(2px, $fortitude-primary-color, $white);
+  font-family: $magra-font;
+  overflow-y: auto;
+  padding-bottom: 10em;
+  padding-right: 1em;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  > div {
+    background-color: rgba(234, 234, 234, 0.4);
+  }
+
+  .journaltitle {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  footer {
+    div {
+      font-size: 0.8em;
+    }
+    > div:nth-child(1) {
+      cursor: pointer;
+    }
+  }
+}
+
+.dropbtn {
+  background-color: $fortitude-primary-color;
+  color: white;
+  font-family: $magra-font;
+
+  padding: 0.6em;
+  font-size: 1em;
+  border-radius: 15px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  font-family: $magra-font;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}

@@ -1,0 +1,112 @@
+@import '../styles/main.scss';
+.comms {
+  //   min-height: 500px;
+  padding-bottom: 1em;
+  //   max-height: 600px;
+  @include primary-h1();
+  * {
+    font-family: $magra-font;
+  }
+  hr {
+    height: 2px;
+    width: 95%;
+    margin: 0;
+    border: none;
+    background-color: $fortitude-primary-color;
+  }
+}
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+}
+.experts {
+  @include primary-h1();
+  * {
+    font-family: $magra-font;
+  }
+}
+.blogs {
+  @include primary-h1();
+  height: 100%;
+  * {
+    font-family: $magra-font;
+  }
+  hr {
+    height: 2px;
+    width: 30%;
+    margin: 0;
+    border: none;
+    background-color: $fortitude-primary-color;
+  }
+  > div:nth-child(2) {
+    @include scrollbars(2px, $fortitude-primary-color, $white);
+    // max-height: 100%;
+    > div {
+    }
+  }
+}
+
+.events {
+  @include primary-h1();
+  * {
+    font-family: $magra-font;
+  }
+  hr {
+    height: 2px;
+    width: 100%;
+    margin: 0;
+    border: none;
+    background-color: $fortitude-primary-color;
+  }
+  .chosen {
+    border-bottom: 1.7px solid $fortitude-primary-color;
+    color: $fortitude-primary-color;
+    font-weight: 600;
+  }
+  > div:nth-child(2) > div:nth-child(1) > div {
+    width: 45%;
+    padding-bottom: 0.5em;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+.graph {
+  @include primary-h1();
+  > div:nth-child(1) {
+    padding-right: 10px;
+    padding: 0 1em 1em;
+    padding-bottom: 0em;
+    border-bottom: 1px solid #eaeaea;
+  }
+  * {
+    font-family: $magra-font;
+  }
+  hr {
+    height: 2px;
+    width: 70%;
+    margin: 0;
+    border: none;
+    background-color: $fortitude-primary-color;
+  }
+  .chosen {
+    border-bottom: 1.7px solid $fortitude-primary-color;
+    color: $fortitude-primary-color;
+    font-weight: 600;
+  }
+}

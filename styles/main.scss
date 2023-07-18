@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Magra&display=swap");
+
+//  colors
+$fortitude-primary-color: #ff7a00;
+$white: #fff;
+$black: #000;
+
+//  fonts
+$magra-font: "Magra", sans-serif;
+$lily-font: "Lily Script One", cursive;
+
+//  customs
+$primary-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+@mixin standard-hr() {
+  hr {
+    height: 2px;
+    width: 60%;
+
+    border: none;
+    background-color: $fortitude-primary-color;
+  }
+}
+@mixin primary-h1 {
+  h1 {
+    font-size: 1.7em;
+    font-family: $magra-font;
+  }
+}
