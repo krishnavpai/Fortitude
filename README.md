@@ -66,9 +66,7 @@ npm run dev
 6. Open your browser and visit: `http://localhost:3000` to access the website.
 
 ## Usage
-
-_(Provide any specific instructions or guidelines on how to use the website and its various features here.)_
-
+Just sign up and start exploring features like journal writing, scheduling doctor appointments, and accessing mental health resources. You can privately track your thoughts, book sessions with professionals, and get personalized support, all in one secure platform designed to help you on your mental wellness journey.
 ## Technologies Used
 
 - MongoDB
